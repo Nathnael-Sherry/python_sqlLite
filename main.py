@@ -27,3 +27,17 @@ class Student(Model):
         database = db
 
 Student.create_table(fail_silently=True)
+
+class Travellers(Model):
+    name = CharField()
+    phonenumber = CharField()
+    email = CharField()
+    county = CharField()
+    gender = CharField()
+    password = CharField(unique=True)
+    religion = CharField()
+
+    class Meta:
+        database = db
+
+Travellers.create_table(fail_silently=True)
